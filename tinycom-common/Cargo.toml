@@ -1,0 +1,22 @@
+[package]
+name = "tinycom-common"
+version = "0.0.1"
+authors = ["Corwin McKnight <corwin.mcknight@gmail.com>"]
+
+[dependencies]
+enum-primitive-derive = "^0.1"
+num = "0.2"
+num-traits = "^0.1"
+log = "0.4"
+
+[dev-dependencies]
+criterion = "0.2"
+
+[lib]
+bench = false
+
+[[bench]]
+path="../benches/cpu_benchmark.rs"
+name = "cpu_benchmark"
+harness = false
+

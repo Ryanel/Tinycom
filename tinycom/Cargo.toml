@@ -1,0 +1,9 @@
+[package]
+name = "tinycom"
+version = "0.0.1"
+authors = ["Corwin McKnight <corwin.mcknight@gmail.com>"]
+
+[dependencies]
+tinycom-common = { path = "../tinycom-common" }
+log = "0.4"
+simplelog = "^0.5.0"

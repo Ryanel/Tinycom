@@ -1,10 +1,6 @@
-[package]
-name = "tinycom"
-version = "0.0.1"
-authors = ["Corwin McKnight <corwin.mcknight@gmail.com>"]
+[workspace]
 
-[dependencies]
-enum-primitive-derive = "^0.1"
-num-traits = "^0.1"
-log = "0.4"
-simplelog = "^0.5.0"
+members = [
+    "tinycom",
+    "tinycom-common"
+]
