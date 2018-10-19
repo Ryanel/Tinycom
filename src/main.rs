@@ -1,17 +1,19 @@
 // Import Crates
 #[macro_use]
 extern crate enum_primitive_derive;
-extern crate num_traits;
+#[macro_use]
 extern crate log;
+extern crate num_traits;
 extern crate simplelog;
 
-// Define mods
-pub mod isa;
-pub mod emulator;
+// Crate usings
+use simplelog::*;
+
+// Mods
+pub mod cpu;
 
 // Usings
-use simplelog::*;
-use emulator::*;
+use cpu::isa::*;
 
 /// Main function
 fn main() {
@@ -19,7 +21,6 @@ fn main() {
     CombinedLogger::init(vec![
         TermLogger::new(LevelFilter::Trace, Config::default()).unwrap(),
     ]).unwrap();
-
-    let mut emu = Emulator::new();
-    emu.run();
+    let x = Instruction::get(0x02_00_00_00);
+    info!("Instruction:\n{:#?}", x);
 }
