@@ -1,5 +1,5 @@
-use cpu::isa::*;
 use cpu::*;
+use tinycom_common::isa::*;
 
 pub struct CPU {
     pub current_instruction: Instruction,
@@ -24,5 +24,10 @@ impl CPU {
     pub fn debug_printstate(self : Self) {
         debug!("Current Instruction: {:?}", self.current_instruction);
         debug!("PC: {:?}", self.pc);
+    }
+
+    #[allow(unreachable_patterns)]
+    pub fn execute(mut self, ins : Instruction) -> u32 {
+        0
     }
 }

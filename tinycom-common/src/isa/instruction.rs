@@ -1,6 +1,7 @@
-use cpu::isa::Opcode;
+use isa::Opcode;
 
 #[derive(Debug)]
+/// A CPU instruction
 pub struct Instruction {
     /// The full dword for this instruction.
     pub dword: u32,

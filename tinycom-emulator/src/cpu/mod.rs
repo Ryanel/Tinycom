@@ -1,7 +1,5 @@
 // Module: cpu
 
-pub mod isa;
-
 pub mod cpu;
 pub use self::cpu::CPU;
 
